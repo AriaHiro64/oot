@@ -186,14 +186,14 @@ static Inventory sNewSaveInventory = {
     (((1 << EQUIP_INV_TUNIC_KOKIRI) << (EQUIP_TYPE_TUNIC * 4)) |
      ((1 << EQUIP_INV_BOOTS_KOKIRI) << (EQUIP_TYPE_BOOTS * 4))),
     // upgrades
-    (0 << 0) |   // quiver
-    (0 << 20) |  // nuts
-    (0 << 17) |  // sticks
-    (0 << 14) |  // bullets
-    (0 << 11) |  // wallet
-    (0 << 9) |   // scale
-    (0 << 6) |   // strength
-    (0 << 3),    // bombs
+    ((0 & 7) << 0)  |  // quiver
+    ((0 & 7) << 3)  |  // bombs
+    ((0 & 7) << 6)  |  // strength
+    ((0 & 7) << 9)  |  // scale
+    ((0 & 3) << 12) |  // wallet
+    ((0 & 7) << 14) |  // bullets
+    ((0 & 7) << 17) |  // sticks
+    ((0 & 3) << 20),   // nuts
     0,                                                              // questItems
     { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, // dungeonItems
     {
@@ -334,14 +334,14 @@ static Inventory sDebugSaveInventory = {
       ((1 << EQUIP_INV_BOOTS_IRON) << (EQUIP_TYPE_BOOTS * 4)) |
       ((1 << EQUIP_INV_BOOTS_HOVER) << (EQUIP_TYPE_BOOTS * 4)))),
     // upgrades
-    (1 << 0) |   // quiver
-    (1 << 20) |  // bombs
-    (1 << 17) |  // strength
-    (1 << 14) |  // wallet
-    (1 << 12) |  // scale
-    (1 << 9) |   // bullets
-    (1 << 6) |   // sticks
-    (1 << 3),    // nuts
+    ((1 & 7) << 0)  |  // quiver
+    ((1 & 7) << 3)  |  // bombs
+    ((1 & 7) << 6)  |  // strength
+    ((1 & 7) << 9)  |  // scale
+    ((1 & 3) << 12) |  // wallet
+    ((1 & 7) << 14) |  // bullets
+    ((1 & 7) << 17) |  // sticks
+    ((1 & 3) << 20),   // nuts
     0x1E3FFFF,                                                      // questItems
     { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, // dungeonItems
     { 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8 },    // dungeonKeys
