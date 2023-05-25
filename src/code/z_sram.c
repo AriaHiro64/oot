@@ -187,13 +187,13 @@ static Inventory sNewSaveInventory = {
      ((1 << EQUIP_INV_BOOTS_KOKIRI) << (EQUIP_TYPE_BOOTS * 4))),
     // upgrades
     (0 << 0) |   // quiver
-    (0 << 20) |  // bombs
-    (0 << 17) |  // strength
-    (0 << 14) |  // wallet
-    (0 << 12) |  // scale
-    (0 << 9) |   // bullets
-    (0 << 6) |   // sticks
-    (0 << 3),    // nuts
+    (0 << 20) |  // nuts
+    (0 << 17) |  // sticks
+    (0 << 14) |  // bullets
+    (0 << 11) |  // wallet
+    (0 << 9) |   // scale
+    (0 << 6) |   // strength
+    (0 << 3),    // bombs
     0,                                                              // questItems
     { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, // dungeonItems
     {
